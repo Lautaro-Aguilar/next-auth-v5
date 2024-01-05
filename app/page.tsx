@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { LoginButton } from "@/components/auth/login-button";
+import Link from "next/link";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,24 @@ export default function Home() {
         >
           🔐 Auth
         </h1>
-        <p className="text-white text-lg">A simple authentication service</p>
+        <div className="text-center">
+          <p className="text-white text-lg">A simple authentication service</p>
+          <Button
+            variant="link"
+            size="sm"
+            asChild
+            className="px-0 text-gray-50 text-base"
+          >
+            <Link
+              href="https://github.com/Lautaro-Aguilar/next-auth-v5"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              by Lautaro Aguilar with ❤️
+            </Link>
+          </Button>
+        </div>
+
         <div>
           <LoginButton>
             <Button variant="secondary" size="lg">
